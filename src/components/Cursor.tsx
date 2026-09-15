@@ -28,8 +28,8 @@ export function Cursor() {
       x = e.clientX;
       y = e.clientY;
       const target = (e.target as HTMLElement | null)?.closest<HTMLElement>("[data-cursor]");
-      const mode = target?.dataset.cursor ?? "default";
-      el.dataset.mode = mode;
+      const mode = target?.dataset["cursor"] ?? "default";
+      el.dataset["mode"] = mode;
       lbl.textContent = mode === "view" ? "VIEW" : mode === "explore" ? "EXPLORE" : "";
     };
 
