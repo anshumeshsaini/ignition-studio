@@ -14,13 +14,13 @@ export function ServicesList() {
   return (
     <section
       className="relative py-24 transition-colors duration-700 md:py-32"
-      style={{ backgroundColor: active ? "oklch(0.18 0.008 250)" : undefined }}
+      style={{ backgroundColor: active ? "var(--card)" : undefined }}
       aria-labelledby="services-heading"
     >
       <div className="edge">
         <SplitLines
           text={"WE DON'T DO\nONE THING."}
-          className="display fluid-lg"
+          className="display fluid-lg max-w-[9ch]"
           lineClassName=""
         />
         <p className="eyebrow mt-6 max-w-sm text-muted-foreground" id="services-heading">
@@ -51,7 +51,7 @@ export function ServicesList() {
                 <div className="flex min-w-0 items-baseline gap-4 md:gap-8">
                   <span className="eyebrow shrink-0 text-acid">{s.index}</span>
                   <span
-                    className="display truncate text-[7vw] leading-none transition-[font-size,color] duration-500 md:text-[4.2vw]"
+                    className="display truncate text-[12vw] leading-none transition-[font-size,color] duration-500 md:text-[4.2vw]"
                     style={{ color: isActive ? "var(--acid)" : undefined }}
                   >
                     {s.title}
@@ -79,7 +79,7 @@ export function ServicesList() {
       {/* hover preview — desktop only, purely decorative */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[8vw] top-1/2 hidden w-64 -translate-y-1/2 overflow-hidden transition-opacity duration-500 xl:block"
+        className="pointer-events-none absolute right-[7vw] top-[38%] hidden w-72 -translate-y-1/2 rotate-3 overflow-hidden border-8 border-bone transition-all duration-500 xl:block"
         style={{ opacity: active ? 0.45 : 0 }}
       >
         <img
@@ -88,7 +88,7 @@ export function ServicesList() {
           loading="lazy"
           width={1280}
           height={1024}
-          className="size-full object-cover grayscale"
+          className="aspect-[4/5] size-full object-cover grayscale"
         />
       </div>
     </section>

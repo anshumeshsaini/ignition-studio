@@ -3,6 +3,7 @@ import { Magnetic } from "../Magnetic";
 import { SplitLines } from "../Reveal";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import { site, whatsappLink } from "@/lib/site";
+import campaignObject from "@/assets/campaign-object.jpg";
 
 export function FinalCTA() {
   const ref = useGsapContext<HTMLElement>(({ gsap, root }) => {
@@ -22,15 +23,14 @@ export function FinalCTA() {
 
   return (
     <section ref={ref} className="relative overflow-hidden border-t border-border py-[16vh]">
-      <div
-        data-glow
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[70vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-acid/10 blur-[120px]"
-      />
+      <div data-glow aria-hidden="true" className="pointer-events-none absolute inset-[-10%] -z-10 opacity-30">
+        <img src={campaignObject} alt="" loading="lazy" width={1280} height={912} className="size-full object-cover grayscale" />
+      </div>
+      <div className="absolute inset-0 -z-10 bg-ink/75" aria-hidden="true" />
       <div className="edge">
         <SplitLines
           text={"LET'S MAKE\nSOMETHING\nUNIGNORABLE."}
-          className="display fluid-xl leading-[0.82] tracking-[-0.05em]"
+          className="display fluid-xl max-w-[10ch] leading-[0.82]"
         />
 
         <div className="mt-12 flex flex-wrap items-center gap-6">

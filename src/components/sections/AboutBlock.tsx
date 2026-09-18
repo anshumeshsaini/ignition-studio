@@ -1,6 +1,7 @@
 import { Reveal, SplitLines } from "../Reveal";
 import studio1 from "@/assets/studio-1.jpg";
 import studio2 from "@/assets/studio-2.jpg";
+import campaignProfile from "@/assets/campaign-profile.jpg";
 
 export function AboutBlock() {
   return (
@@ -8,22 +9,25 @@ export function AboutBlock() {
       <p className="eyebrow text-muted-foreground">(WHO WE ARE)</p>
       <SplitLines
         text={"WE ARE STRATEGISTS,\nDESIGNERS, DEVELOPERS,\nMEDIA BUYERS AND\nSTORYTELLERS."}
-        className="display mt-6 fluid-lg leading-[0.85] tracking-[-0.045em]"
+        className="display mt-6 fluid-lg max-w-[13ch] leading-[0.85]"
       />
 
       <div className="mt-[8vh] grid items-start gap-10 md:grid-cols-12">
-        <Reveal className="md:col-span-5 md:pt-[12vh]">
-          <div className="aspect-[4/5] overflow-hidden bg-muted">
+        <Reveal className="relative md:col-span-6 md:pt-[12vh]">
+          <div className="aspect-[4/5] overflow-hidden bg-muted md:aspect-[5/4]">
             <img
               src={studio1}
               alt="Studio team working through a campaign"
               loading="lazy"
-              className="size-full object-cover grayscale"
+              className="size-full object-cover grayscale transition duration-700 hover:grayscale-0"
             />
+          </div>
+          <div className="absolute -bottom-12 right-4 w-2/5 border-8 border-ink md:-right-16">
+            <img src={campaignProfile} alt="Sculptural creative campaign study" loading="lazy" width={1024} height={1280} className="aspect-[3/4] size-full object-cover" />
           </div>
         </Reveal>
 
-        <Reveal className="md:col-span-4" delay={0.1}>
+        <Reveal className="md:col-span-4 md:col-start-8" delay={0.1}>
           <p className="text-lg leading-relaxed text-foreground/80">
             One team, no handoffs. Strategy sits next to the edit bay, and the media buyer sees
             the cut before it ships. That is the whole advantage.
@@ -43,7 +47,7 @@ export function AboutBlock() {
           </ul>
         </Reveal>
 
-        <Reveal className="md:col-span-3 md:pt-[26vh]" delay={0.15}>
+        <Reveal className="md:col-span-3 md:col-start-10 md:-mt-10" delay={0.15}>
           <div className="aspect-square overflow-hidden bg-muted">
             <img
               src={studio2}

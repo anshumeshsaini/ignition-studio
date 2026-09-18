@@ -6,8 +6,8 @@
 
 /*
  * UNIGNORABLE — design system
- * Near-black canvas, bone off-white, one acid accent.
- * Display: Space Grotesk. Body: Inter.
+ * Acid editorial: near-black, bone, electric lime, signal coral.
+ * Display: Bebas Neue. Body: Barlow.
  */
 
 @theme inline {
@@ -18,8 +18,8 @@
   --radius-2xl: 4px;
   --radius-3xl: 6px;
   --radius-4xl: 8px;
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", Impact, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -42,13 +42,15 @@
   --color-bone: var(--bone);
   --color-ink: var(--ink);
   --color-acid: var(--acid);
+  --color-signal: var(--signal);
 }
 
 :root {
   --radius: 2px;
-  --ink: oklch(0.14 0.008 250);
-  --bone: oklch(0.95 0.008 95);
-  --acid: oklch(0.87 0.23 128);
+  --ink: oklch(0.16 0.012 135);
+  --bone: oklch(0.95 0.012 92);
+  --acid: oklch(0.92 0.25 125);
+  --signal: oklch(0.67 0.2 31);
 
   --background: var(--ink);
   --foreground: var(--bone);
@@ -103,8 +105,8 @@
   .display {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 0.86;
+    letter-spacing: 0;
+    line-height: 0.88;
     text-transform: uppercase;
   }
 }
@@ -145,10 +147,28 @@
 }
 
 .fluid-xl {
-  font-size: clamp(3rem, 12vw, 12rem);
+  font-size: clamp(4.25rem, 11vw, 10.5rem);
 }
 .fluid-lg {
-  font-size: clamp(2.4rem, 8vw, 7.5rem);
+  font-size: clamp(3.5rem, 7.5vw, 7rem);
+}
+
+@keyframes campaign-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.04); }
+  50% { transform: translate3d(-1.5%, 1%, 0) scale(1.08); }
+}
+
+@keyframes signal-scan {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(110%); }
+}
+
+.campaign-drift {
+  animation: campaign-drift 12s ease-in-out infinite;
+}
+
+.signal-scan {
+  animation: signal-scan 5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
 .fluid-md {
   font-size: clamp(1.8rem, 5vw, 4rem);
