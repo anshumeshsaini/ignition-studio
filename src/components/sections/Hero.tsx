@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
+import campaignGlass from "@/assets/campaign-glass.jpg";
+import campaignProfile from "@/assets/campaign-profile.jpg";
 import { Magnetic } from "../Magnetic";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import { site } from "@/lib/site";
 
-const LINES = ["WE MAKE", "BRANDS", "IMPOSSIBLE", "TO IGNORE."];
+const LINES = ["WE MAKE", "BRANDS", "HARD TO", "IGNORE."];
 
 export function Hero() {
   const bg = useRef<HTMLDivElement>(null);
@@ -53,35 +54,37 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pb-10">
+    <section ref={ref} className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pb-8 pt-28 md:pb-12">
       <div data-hero-media className="absolute inset-0 -z-10">
         <div ref={bg} className="absolute inset-0 transition-transform duration-[900ms] ease-out">
           <img
-            src={heroImg}
-            alt=""
-            width={1920}
-            height={1200}
+            src={campaignProfile}
+            alt="Iridescent sculptural portrait from an UNIGNORABLE campaign"
+            width={1024}
+            height={1280}
             fetchPriority="high"
-            className="size-full object-cover opacity-70"
+            className="campaign-drift size-full object-cover object-[68%_center] opacity-90 md:object-center"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/45" />
       </div>
 
-      <div className="edge">
-        <div className="flex flex-wrap items-end justify-between gap-6 pb-8">
+      <div className="edge relative grid items-end gap-8 lg:grid-cols-12">
+        <div className="lg:col-span-9">
+        <div className="flex flex-wrap items-end justify-between gap-6 pb-6">
           <p data-hero-meta className="eyebrow text-acid">
-            PERFORMANCE / CREATIVE / DIGITAL
+            <span className="mr-3 inline-block h-px w-10 bg-acid align-middle" /> CREATIVE / STRATEGY / PERFORMANCE
           </p>
-          <p data-hero-meta className="eyebrow text-foreground/60">
+          <p data-hero-meta className="eyebrow text-foreground/60 lg:hidden">
             {site.locations.join(" / ")}
           </p>
         </div>
 
-        <h1 data-hero-copy className="display fluid-xl">
+        <h1 data-hero-copy className="display fluid-xl max-w-[9ch]">
           {LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden">
-              <span data-hero-line className={`block ${i === 2 ? "text-acid" : ""}`}>
+              <span data-hero-line className={`block ${i === 1 ? "ml-[0.45em] text-transparent [-webkit-text-stroke:1px_var(--bone)]" : ""} ${i === 3 ? "text-acid" : ""}`}>
                 {line}
               </span>
             </span>
@@ -106,13 +109,26 @@ export function Hero() {
             EXPLORE OUR WORK <ArrowDown className="size-4" aria-hidden="true" />
           </Link>
         </div>
-
-        <div data-hero-meta className="mt-14 flex items-center gap-3 text-muted-foreground">
+        <div data-hero-meta className="mt-10 flex items-center gap-3 text-muted-foreground">
           <span className="eyebrow">SCROLL</span>
           <span className="h-px w-16 bg-border" />
           <ArrowDown className="size-3 animate-bounce" aria-hidden="true" />
         </div>
+        </div>
+
+        <aside data-hero-meta className="relative hidden self-end lg:col-span-3 lg:block">
+          <div className="relative ml-auto w-[min(22vw,280px)] border border-foreground/20 bg-bone p-3 text-ink shadow-2xl transition-transform duration-500 hover:-translate-y-3">
+            <div className="aspect-[4/3] overflow-hidden bg-muted">
+              <img src={campaignGlass} alt="Acid glass campaign artwork" width={1024} height={1280} className="size-full object-cover transition-transform duration-700 hover:scale-110" />
+            </div>
+            <p className="eyebrow mt-4 text-signal">FEATURED / 01</p>
+            <p className="display mt-1 text-3xl leading-none">ATTENTION, ART DIRECTED.</p>
+            <ArrowUpRight className="absolute -right-3 -top-3 size-9 bg-signal p-2 text-bone" aria-hidden="true" />
+          </div>
+          <p className="eyebrow mt-5 text-right text-foreground/60">{site.locations.join(" / ")}</p>
+        </aside>
       </div>
+      <div aria-hidden="true" className="signal-scan absolute bottom-0 h-1 w-1/2 bg-signal" />
     </section>
   );
 }
