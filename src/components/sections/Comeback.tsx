@@ -106,5 +106,6 @@ export function Comeback() {
         WE CREATE IT.
       </p>
     </section>
+    </div>
   );
 }
