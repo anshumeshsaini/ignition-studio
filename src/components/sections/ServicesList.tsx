@@ -13,7 +13,7 @@ export function ServicesList() {
 
   return (
     <section
-      className="relative py-24 transition-colors duration-700 md:py-32"
+      className="relative py-24 transition-colors duration-700 md:py-40"
       style={{ backgroundColor: active ? "var(--card)" : undefined }}
       aria-labelledby="services-heading"
     >
@@ -42,7 +42,7 @@ export function ServicesList() {
                 onMouseLeave={() => setActive(null)}
                 onFocus={() => setActive(s.slug)}
                 onBlur={() => setActive(null)}
-                className="edge group relative flex items-center justify-between gap-6 py-5 transition-all duration-500 md:py-7"
+                className="edge group relative flex min-h-24 items-center justify-between gap-6 py-5 transition-all duration-500 hover:bg-acid hover:text-acid-foreground md:min-h-32 md:py-7"
                 style={{
                   opacity: dimmed ? 0.35 : 1,
                   transform: isActive ? "translateX(1.25rem)" : "translateX(0)",
@@ -52,7 +52,7 @@ export function ServicesList() {
                   <span className="eyebrow shrink-0 text-acid">{s.index}</span>
                   <span
                     className="display truncate text-[12vw] leading-none transition-[font-size,color] duration-500 md:text-[4.2vw]"
-                    style={{ color: isActive ? "var(--acid)" : undefined }}
+                    style={{ color: isActive ? "currentColor" : undefined }}
                   >
                     {s.title}
                   </span>
