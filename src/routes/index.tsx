@@ -11,6 +11,8 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Marquee } from "@/components/sections/Marquee";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { CampaignGrid } from "@/components/sections/CampaignGrid";
+import { SignalStrip } from "@/components/sections/SignalStrip";
 import { site } from "@/lib/site";
 
 const title = `${site.name} — We make brands impossible to ignore`;
@@ -35,9 +37,12 @@ function Index() {
     <SiteFrame>
       <h1 className="sr-only">{site.name} — creative and performance studio</h1>
       <Hero />
+      <SignalStrip />
+      <CampaignGrid />
       <Stats />
       <Comeback />
       <ServicesList />
+      <SignalStrip />
       <WorkPreview />
       <VideoSection />
       <AboutBlock />

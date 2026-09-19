@@ -26,18 +26,23 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="edge border-y border-border py-16 md:py-24">
+    <section ref={ref} className="edge border-y border-border bg-card py-16 md:py-24">
+      <div className="mb-12 flex items-end justify-between gap-8 border-b border-border pb-5">
+        <p className="eyebrow text-acid">(PROOF OF MOTION)</p>
+        <p className="max-w-xs text-right text-sm text-muted-foreground">Structured demo metrics, ready to be replaced with verified agency data.</p>
+      </div>
       <div className="grid gap-y-12 md:grid-cols-4 md:gap-x-6">
         {STATS.map((s, i) => (
           <div
             key={s.label}
-            className={`flex flex-col ${i % 2 === 1 ? "md:mt-16" : ""} ${i === 2 ? "md:mt-8" : ""}`}
+            className={`relative flex min-h-56 flex-col justify-end border-l border-border pl-5 ${i % 2 === 1 ? "md:mt-16" : ""} ${i === 2 ? "md:mt-8" : ""}`}
           >
             <div className="display flex items-start text-[18vw] leading-[0.8] md:text-[7vw]">
               <span data-count={s.value}>0</span>
               <span className="text-acid">{s.suffix}</span>
             </div>
             <span className="eyebrow mt-3 text-muted-foreground">{s.label}</span>
+            <span className="eyebrow absolute right-0 top-0 text-foreground/20">0{i + 1}</span>
           </div>
         ))}
       </div>
