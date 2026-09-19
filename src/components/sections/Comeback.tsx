@@ -68,6 +68,7 @@ export function Comeback() {
   }, []);
 
   return (
+    <div>
     <section
       ref={ref}
       aria-label="Our point of view"
