@@ -38,7 +38,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
       {/* entrance loader */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-[80] flex items-end justify-center bg-ink transition-[clip-path,opacity] duration-[900ms] ease-[cubic-bezier(0.83,0,0.17,1)]"
+        className="pointer-events-none fixed inset-0 z-[80] flex items-end justify-center bg-acid text-acid-foreground transition-[clip-path,opacity] duration-[900ms] ease-[cubic-bezier(0.83,0,0.17,1)]"
         style={{
           clipPath: booted ? "inset(0 0 100% 0)" : "inset(0 0 0% 0)",
           opacity: booted ? 0 : 1,
@@ -46,17 +46,17 @@ export function SiteFrame({ children }: { children: ReactNode }) {
       >
         <span className="display pb-[12vh] text-[14vw] leading-none text-foreground">
           {site.name}
-          <span className="text-acid">.</span>
+          <span className="text-signal">.</span>
         </span>
       </div>
 
       {/* route transition wipe */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-[75] flex items-center justify-center bg-ink transition-[clip-path] duration-[600ms] ease-[cubic-bezier(0.83,0,0.17,1)]"
+        className="pointer-events-none fixed inset-0 z-[75] flex items-center justify-center bg-acid transition-[clip-path] duration-[600ms] ease-[cubic-bezier(0.83,0,0.17,1)]"
         style={{ clipPath: wipe ? "inset(0 0 0% 0)" : "inset(0 0 100% 0)" }}
       >
-        <span className="display text-[8vw] leading-none text-acid">LOADING</span>
+        <span className="display text-[8vw] leading-none text-acid-foreground">LOADING</span>
       </div>
 
       <Nav />
