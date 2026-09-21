@@ -22,7 +22,7 @@ export function AboutBlock() {
               className="size-full object-cover grayscale transition duration-700 hover:grayscale-0"
             />
           </div>
-          <div className="absolute -bottom-12 right-4 w-2/5 border-8 border-ink md:-right-16">
+          <div className="absolute -bottom-12 right-4 w-2/5 border-8 border-background md:-right-16">
             <img src={campaignProfile} alt="Sculptural creative campaign study" loading="lazy" width={1024} height={1280} className="aspect-[3/4] size-full object-cover" />
           </div>
         </Reveal>

@@ -63,11 +63,11 @@ export function Hero() {
             width={1024}
             height={1280}
             fetchPriority="high"
-            className="campaign-drift size-full object-cover object-[68%_center] opacity-90 md:object-center"
+            className="campaign-drift size-full object-cover object-[68%_center] opacity-70 mix-blend-multiply md:object-center"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/55" />
       </div>
 
       <div className="edge relative grid items-end gap-8 lg:grid-cols-12">
@@ -84,7 +84,7 @@ export function Hero() {
         <h1 data-hero-copy className="display fluid-xl max-w-[9ch]">
           {LINES.map((line, i) => (
             <span key={line} className="block overflow-hidden">
-              <span data-hero-line className={`block ${i === 1 ? "ml-[0.45em] text-transparent [-webkit-text-stroke:1px_var(--bone)]" : ""} ${i === 3 ? "text-acid" : ""}`}>
+              <span data-hero-line className={`block ${i === 1 ? "ml-[0.45em] text-transparent [-webkit-text-stroke:1.5px_var(--foreground)]" : ""} ${i === 3 ? "text-acid" : ""}`}>
                 {line}
               </span>
             </span>

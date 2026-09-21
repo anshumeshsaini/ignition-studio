@@ -40,7 +40,7 @@ export function WorkPreview() {
                   loading="lazy"
                    className="size-full object-cover saturate-[0.65] transition-all duration-[900ms] ease-out group-hover:scale-[1.05] group-hover:saturate-100"
                 />
-                 <span className="absolute left-0 top-0 bg-ink px-3 py-2 text-bone eyebrow">0{i + 1} / DEMO</span>
+                 <span className="absolute left-0 top-0 bg-acid px-3 py-2 text-acid-foreground eyebrow">0{i + 1} / DEMO</span>
               </div>
               <div className="mt-5 flex flex-wrap items-start justify-between gap-4">
                 <div>
