@@ -30,7 +30,7 @@ export function useSmoothScroll() {
       current += (clamped - current) * 0.2;
       root.style.setProperty("--scroll-velocity", current.toFixed(4));
       root.style.setProperty("--scroll-skew", `${(current * 3.2).toFixed(3)}deg`);
-      root.dataset.scrollDir = direction > 0 ? "down" : "up";
+      root.dataset["scrollDir"] = direction > 0 ? "down" : "up";
     });
 
     const raf = (time: number) => lenis.raf(time * 1000);
