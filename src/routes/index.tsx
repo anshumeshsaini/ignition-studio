@@ -40,6 +40,7 @@ function Index() {
       <Hero />
       <SignalStrip />
       <CampaignGrid />
+      <EditorialMonolith />
       <Stats />
       <Comeback />
       <ServicesList />
