@@ -3,8 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import campaignGlass from "@/assets/campaign-glass.jpg";
 import campaignProfile from "@/assets/campaign-profile.jpg";
-import editorialMonolith from "@/assets/editorial-monolith.jpg";
-import editorialTexture from "@/assets/editorial-texture.jpg";
 import { Magnetic } from "../Magnetic";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import { site } from "@/lib/site";
@@ -65,25 +63,12 @@ export function Hero() {
             width={1024}
             height={1280}
             fetchPriority="high"
-            className="campaign-drift velocity-stretch size-full object-cover object-[68%_center] opacity-70 mix-blend-multiply md:object-center"
+            className="campaign-drift size-full object-cover object-[68%_center] opacity-70 mix-blend-multiply md:object-center"
           />
         </div>
-        <img
-          src={editorialTexture}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 size-full object-cover opacity-20 mix-blend-multiply"
-        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/5" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/55" />
       </div>
-
-      <img
-        src={editorialMonolith}
-        alt=""
-        aria-hidden="true"
-        className="velocity-skew pointer-events-none absolute -right-10 top-[12%] hidden h-[58vh] w-[26vw] object-cover opacity-[0.18] mix-blend-multiply lg:block"
-      />
 
       <div className="edge relative grid items-end gap-8 lg:grid-cols-12">
         <div className="lg:col-span-9">

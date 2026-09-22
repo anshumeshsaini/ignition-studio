@@ -198,23 +198,6 @@
   font-size: clamp(1.8rem, 5vw, 4rem);
 }
 
-/* scroll-velocity driven motion (values published by Lenis in useSmoothScroll) */
-:root {
-  --scroll-velocity: 0;
-  --scroll-skew: 0deg;
-}
-
-.velocity-skew {
-  transform: skewY(var(--scroll-skew)) scale(1.02);
-  will-change: transform;
-}
-
-.velocity-stretch {
-  transform: scaleY(calc(1 + var(--scroll-velocity) * 0.035));
-  transform-origin: center;
-  will-change: transform;
-}
-
 .link-underline {
   position: relative;
 }
