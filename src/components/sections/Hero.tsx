@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import campaignGlass from "@/assets/campaign-glass.jpg";
 import campaignProfile from "@/assets/campaign-profile.jpg";
+import editorialMonolith from "@/assets/editorial-monolith.jpg";
+import editorialTexture from "@/assets/editorial-texture.jpg";
 import { Magnetic } from "../Magnetic";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import { site } from "@/lib/site";
