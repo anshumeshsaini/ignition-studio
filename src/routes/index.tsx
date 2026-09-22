@@ -12,6 +12,7 @@ import { Marquee } from "@/components/sections/Marquee";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { CampaignGrid } from "@/components/sections/CampaignGrid";
+import { EditorialMonolith } from "@/components/sections/EditorialMonolith";
 import { SignalStrip } from "@/components/sections/SignalStrip";
 import { site } from "@/lib/site";
 
