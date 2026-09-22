@@ -198,6 +198,12 @@
   font-size: clamp(1.8rem, 5vw, 4rem);
 }
 
+.velocity-lean {
+  transform: skewY(var(--scroll-velocity, 0deg));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
 .link-underline {
   position: relative;
 }
