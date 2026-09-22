@@ -1,5 +1,6 @@
 import { useGsapContext } from "@/hooks/useGsapContext";
 import studio2 from "@/assets/studio-2.jpg";
+import editorialMonolith from "@/assets/editorial-monolith.jpg";
 
 export function VideoSection() {
   const ref = useGsapContext<HTMLElement>(({ gsap, root }) => {
