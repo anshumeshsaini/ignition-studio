@@ -1,5 +1,6 @@
 import { useGsapContext } from "@/hooks/useGsapContext";
 import studio2 from "@/assets/studio-2.jpg";
+import editorialMonolith from "@/assets/editorial-monolith.jpg";
 
 export function VideoSection() {
   const ref = useGsapContext<HTMLElement>(({ gsap, root }) => {
@@ -21,10 +22,17 @@ export function VideoSection() {
     <section ref={ref} className="relative flex min-h-[90svh] items-center overflow-hidden">
       <div data-media className="absolute inset-[-10%] -z-10">
         <img
-          src={studio2}
-          alt="Camera lens catching light in the studio"
+          src={editorialMonolith}
+          alt="Monolithic editorial sculpture lit in studio light"
           loading="lazy"
-          className="size-full object-cover opacity-40 grayscale"
+          className="velocity-skew size-full object-cover opacity-45"
+        />
+        <img
+          src={studio2}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="absolute inset-0 size-full object-cover opacity-25 mix-blend-multiply grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background" />
       </div>
